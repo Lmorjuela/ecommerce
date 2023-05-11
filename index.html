@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src ="./assets/js/main.js" defer></script>
+</head>
+
+<body>
+
+    <div id="loading">
+        <img src="/assets/css/logo_icon.png" alt="loading">
+    </div>
+
+    <header>
+        <nav>
+            <a href="#home">
+                <img class=logo_icon src="/assets/css/logo_icon.png" alt="">
+                <span class="store">STORE</span>
+            </a>
+            <ul class = menu>
+                <li class="home_header">
+                    <a href="#home">
+                        Home
+                     </a>
+                </li>
+                <li class="product_header">
+                    <a href="#products">
+                        Products
+                    </a>
+                </li>
+            </ul>
+
+        <i class='bx bx-moon'></i>
+        <i class='bx bx-shopping-bag'></i>
+        <span class="amountProducts"></span>
+        <i class='bx bx-menu'></i>
+        </nav>
+
+    </header>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky",window.scrollY>0);
+         }) 
+    </script>
+    
+    <div class="container">
+        <a name="home"><div class="home_principal"></a>
+            <div class="principal_title">
+                <h1>New Sweatshirt COLLECTIONS 2022</h1>
+                <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from 2022 series, with a modern design.</p>
+                <span>$14.00</span>
+                <a href="#products"><button class="btn_home">
+                    Show more
+                </button></a>
+            </div>
+            <div class="box_principal_image">
+                <img class="principal_image" src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270450/eCommerce/sweater2_y7yzqs.png" alt="Principal_Imagen">
+            </div>
+        </div>
+        <br></br>
+        <section class="btn_filters">
+            <button class="showAllProducts">
+                Show all
+                <br><span>Show all products</span></br>
+            </button>
+            <button class="shirt">
+                Shirt
+                <br><span>7 products</span></br>
+            </button>
+            <button class="hoddie">
+                Hoddie
+                <br><span>6 products</span></br>
+            </button>
+            <button class="sweater">
+                Sweater
+                <br><span>5 products</span></br>
+            </button>
+        </section>
+    </div>
+
+    <a name="products"><div class="products"></div></a>
+        <div class="cart">
+            <div class="cart_products"></div>
+            <div class="cart_total">
+                <div class="cart_total--info">
+                    <span class="info_amount">Cantidad</span>
+                    <span class="info_total">Total</span>
+                </div>
+
+                <button class="btn_buy">Comprar</button>
+            </div>
+        </div>
+
+    <footer class="pie_pagina">
+        <div class="informationCompany">
+            <div class="our_information">
+                <h4>Our Information</h4> 
+                <p>Toluca - México</p>
+            </div>
+    
+            <div class="about-us"> 
+                <h4>About Us</h4>
+                <p>Support Center</p>
+                <p>Customer Support</p>
+                <p>About Us</p>
+                <p>Copy Right</p>
+            </div>
+    
+            <div class="product">
+                <h4>Product</h4>
+                <p>Hoodies</p>
+                <p>Shirts</p>
+                <p>About Us</p>
+                <p>Sweatshirts</p>
+            </div>
+    
+            <div class="social"> 
+                <h4>Social</h4>
+                <i class='bx bxl-facebook'></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-instagram' ></i>
+            </div>
+        </div>
+        <div class="informationAutor">
+            <div class="me"> 
+                <p class="personWork">Laura Marcela Orjuela Reinosa, lauramorjuelar@gmail.com, Repositorio</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
