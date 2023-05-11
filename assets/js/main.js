@@ -380,7 +380,6 @@ async function main() {
     imageTransition();
     loading();
     filterProduct(db);
-
 }
 
 main();

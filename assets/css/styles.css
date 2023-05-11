@@ -343,11 +343,14 @@ header > nav > i{
     display:flex;
     align-items: center;
     gap: 1rem;
+    color: var(--black);
+    font-weight: bold;
 }
 
 .product_info h4{
     min-height: 36px;
     padding-top: 10px;
+    color: var(--black)
 }
 
 .product_info h4:hover{
@@ -358,7 +361,7 @@ header > nav > i{
 
 .product_info span{
     font-size: 13px;
-    color: var(--text-color-light);
+    color: var(--text-color);
 }
 
 .product_info .soldOut{
