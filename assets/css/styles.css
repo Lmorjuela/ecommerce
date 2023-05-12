@@ -178,6 +178,10 @@ header > nav > i{
     transition: right 0.7s;
 }
 
+.bx-menu{
+    color: var(--black);
+}
+
 .menu_show{
     right: 0;
 }
