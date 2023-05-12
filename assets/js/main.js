@@ -363,6 +363,55 @@ function filterProduct(db){
       });
 }
 
+function showMenu(){
+    const iconMenuHTML = document.querySelector(".bx-menu");
+    const menuHTML = document.querySelector(".menu");
+    
+    iconMenuHTML.addEventListener("click", function(){
+        menuHTML.classList.toggle("menu_show");
+    })
+}
+
+function hiddenMenu(){
+    const homeHTML = document.querySelector(".home_header");
+    const productHTML = document.querySelector(".product_header");
+    const menuHTML = document.querySelector(".menu");
+
+    homeHTML.addEventListener("click", function(){
+        menuHTML.classList.toggle("menu_show");
+    })
+
+    productHTML.addEventListener("click", function(){
+        menuHTML.classList.toggle("menu_show");
+    })
+}
+
+function darkMode(){
+    const moonHTML = document.querySelector(".bx-moon");
+    const  darkModeHTML= document.querySelector("body");
+
+    moonHTML.addEventListener("click", function(){
+        darkModeHTML.classList.toggle("darkmode");
+    })
+}
+
+
+function changeIcon(){
+    const icon1 = document.getElementById('.bx-moon');
+    icon1.classList.add('.hidden');
+
+    const icon2 = document.getElementById('.bx-sun');
+    icon2.classList.remove('.hidden');
+}
+
+
+function showSun(){
+    const firstIcon = document.querySelector(".bx-moon");
+    firstIcon.addEventListener("click",changeIcon);
+}
+
+
+
 async function main() {
     const db = {
         products: JSON.parse(window.localStorage.getItem("products")) || (await getProducts()),
@@ -380,6 +429,11 @@ async function main() {
     imageTransition();
     loading();
     filterProduct(db);
+    showMenu();
+    hiddenMenu();
+    darkMode();
+    changeIcon();
+    showSun();
 }
 
 main();

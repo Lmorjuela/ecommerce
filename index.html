@@ -11,19 +11,19 @@
     <script src ="./assets/js/main.js" defer></script>
 </head>
 
-<body>
+<body class = "darkmode">
 
     <div id="loading">
         <img src="/assets/css/logo_icon.png" alt="loading">
     </div>
 
     <header>
-        <nav>
+        <nav class ="navbar">
             <a href="#home">
                 <img class=logo_icon src="/assets/css/logo_icon.png" alt="">
                 <span class="store">STORE</span>
             </a>
-            <ul class = menu>
+            <ul class = "menu">
                 <li class="home_header">
                     <a href="#home">
                         Home
@@ -35,11 +35,14 @@
                     </a>
                 </li>
             </ul>
-
         <i class='bx bx-moon'></i>
         <i class='bx bx-shopping-bag'></i>
         <span class="amountProducts"></span>
         <i class='bx bx-menu'></i>
+        <div class="hidden">
+            <i class='bx bx-sun'></i>
+        </div>
+        
         </nav>
 
     </header>

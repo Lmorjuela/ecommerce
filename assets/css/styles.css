@@ -15,13 +15,14 @@
     --text-color-light: hsl(0, 0%, 55%);
     --body-color: hsl(206, 4%, 97%);
     --container-color: hsl(0, 0%, 100%);
-    --border-color: hsl(0, 0%, 94%);
+    --border-color: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --h-header: 3rem;
     --shadow-general: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
 
-body.dark-theme {
+
+body.darkmode {
     --first-color: hsl(182, 53%, 74%);
     --button-color: hsl(246, 16%, 12%);
     --button-color-alt: hsl(0, 0%, 28%);
@@ -30,7 +31,10 @@ body.dark-theme {
     --text-color: hsl(0, 0%, 75%);
     --body-color: hsl(249, 19%, 14%);
     --container-color: hsl(246, 16%, 12%);
-    --border-color: hsl(0, 0%, 20%)
+    --border-color: hsl(0, 0%, 20%);
+    --black: hsl(0, 0%, 100%);
+    --shadow-general: 10px 10px 5px 0px rgba(0, 0, 0, 0.16);
+    transition: 0.5s;
 }
 
 #loading {
@@ -119,6 +123,18 @@ header > nav > i{
     top: 1px;
 }
 
+.bx-moon{
+    color: var(--black);
+}
+
+.bx-shopping-bag {
+    color: var(--black);
+}
+
+.hidden{
+    display:none;
+}
+
 .store{
     font-weight: bold;
     color: var(--text-color);
@@ -146,6 +162,36 @@ header > nav > i{
     left: -17px;
     top: 14px;
 }
+
+.menu{
+    background-color: var(--container-color);
+    position: fixed;
+    right:-100%;
+    top: var(--h-header);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: right 0.7s;
+}
+
+.menu_show{
+    right: 0;
+}
+
+.home_header{
+    font-size: 25px;
+    color: var(--black);
+}
+
+.product_header{
+    font-size: 25px;
+    color: var(--black);
+}
+
 
 /*Home*/
 
@@ -203,7 +249,7 @@ header > nav > i{
 
 .btn_home {
     background-color: var(--button-color);
-    color: var(--card-color);
+    color: white;
     font-size: 17px;
     font-weight: bold;
     width:9rem;
@@ -226,6 +272,7 @@ header > nav > i{
     height: 3rem;
     font-size: 1rem;
     font-weight: bold;
+    color: var(--black);
 }
 
 .showAllProducts span{
@@ -235,7 +282,7 @@ header > nav > i{
 
 .showAllProducts:hover{
     cursor: pointer;
-    background-color: var(--black);
+    background-color: black;
     color: white;
     transition: 0.5s;
 }
@@ -247,6 +294,7 @@ header > nav > i{
     height: 3rem;
     font-size: 1rem;
     font-weight: bold;
+    color: var(--black);
 }
 
 .shirt span{
@@ -256,7 +304,7 @@ header > nav > i{
 
 .shirt:hover{
     cursor: pointer;
-    background-color: var(--black);
+    background-color: black;
     color: white;
     transition: 0.5s;
 }
@@ -268,6 +316,7 @@ header > nav > i{
     height: 3rem;
     font-size: 1rem;
     font-weight: bold;
+    color: var(--black);
 }
 
 .hoddie span{
@@ -277,7 +326,7 @@ header > nav > i{
 
 .hoddie:hover{
     cursor: pointer;
-    background-color: var(--black);
+    background-color: black;
     color: white;
     transition: 0.5s;
 }
@@ -289,6 +338,7 @@ header > nav > i{
     height: 3rem;
     font-size: 1rem;
     font-weight: bold;
+    color: var(--black);
 }
 
 .sweater span{
@@ -298,7 +348,7 @@ header > nav > i{
 
 .sweater:hover{
     cursor: pointer;
-    background-color: var(--black);
+    background-color: black;
     color: white;
     transition: 0.5s;
 }
@@ -374,13 +424,14 @@ header > nav > i{
 }
 
 .product_info .bx-plus{
-    box-shadow: 0px 0px 10px 5px #E4E4E4;
+    box-shadow: var(--shadow-general);
     background-color: var(--container-color);
     border-radius: 50%;
     padding: 10px;
     position:absolute;
     top:-1.2rem;
     right: 1rem;
+    font-size: 25px;
 }
 
 .bx-plus:hover{
@@ -432,6 +483,7 @@ header > nav > i{
     width: 40%;
     background-color: var(--card-color);
     border-radius: 1rem;
+    border: 1.5px solid var(--first-color);
 }
 
 .cart_product--body{
@@ -441,6 +493,7 @@ header > nav > i{
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    color: var(--black);
 }
 
 .cart_product--body p {
@@ -509,7 +562,7 @@ header > nav > i{
     padding: 1rem;
     width: 100%;
     background-color: var(--button-color);
-    color: var(--container-color);
+    color: white;
     font-weight: bold;
     font-size: 0,7rem;
     cursor: pointer;
@@ -589,10 +642,9 @@ body::-webkit-scrollbar-track {
 }
 
 .me p {
-    color: white;
+    color:var(--card-color);
     text-align: center;
 }
-
 
 
 @media (min-width:700px){
@@ -604,12 +656,25 @@ body::-webkit-scrollbar-track {
         }
 
         .menu{
+            background-color: transparent;
             position: absolute;
-            left: 140px;
-            top: 15px;
+            left:190px;
+            top:24px;
+            width: 0;
+            height: 0;
             display: flex;
+            flex-direction: row;
             gap: 1rem;
-            font-weight: bold;
+        }
+
+        .home_header{
+            font-size: 16px;
+            color: var(--black);
+        }
+        
+        .product_header{
+            font-size: 16px;
+            color: var(--black);
         }
 
         /*HOME*/
