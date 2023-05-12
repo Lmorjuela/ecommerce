@@ -395,23 +395,6 @@ function darkMode(){
     })
 }
 
-
-function changeIcon(){
-    const icon1 = document.getElementById('.bx-moon');
-    icon1.classList.add('.hidden');
-
-    const icon2 = document.getElementById('.bx-sun');
-    icon2.classList.remove('.hidden');
-}
-
-
-function showSun(){
-    const firstIcon = document.querySelector(".bx-moon");
-    firstIcon.addEventListener("click",changeIcon);
-}
-
-
-
 async function main() {
     const db = {
         products: JSON.parse(window.localStorage.getItem("products")) || (await getProducts()),
@@ -432,8 +415,6 @@ async function main() {
     showMenu();
     hiddenMenu();
     darkMode();
-    changeIcon();
-    showSun();
 }
 
 main();
